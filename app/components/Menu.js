@@ -7,6 +7,8 @@ import SwiperExample3 from '../views/SwiperExample3';
 import LinkExample from '../views/LinkExample';
 import NavigatorExample from '../views/NavigatorExample';
 import IntroExample from '../views/IntroExample';
+import NetworkingExample from '../views/NetworkingExample';
+import ProgressExample from '../views/ProgressExample';
 
 class Menu extends Component {
   constructor() {
@@ -19,7 +21,9 @@ class Menu extends Component {
         {title: 'Swiper Example2', component: SwiperExample2},
         {title: 'Swiper Example3', component: SwiperExample3},
         {title: 'Link Example', component: LinkExample},
-        {title: 'Intro Example', component: IntroExample}
+        {title: 'Intro Example', component: IntroExample},
+        {title: 'Networking Example', component: NetworkingExample},
+        {title: 'Progress Example', component: ProgressExample},
       ],
     };
   }
