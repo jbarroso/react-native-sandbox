@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View,
-  Navigator,
-  TouchableHighlight
-} from 'react-native';
+import { StyleSheet, Text, View, Navigator, TouchableHighlight } from 'react-native';
 
 class NavigatorExample extends Component {
 
@@ -143,7 +136,7 @@ class Four extends Component {
   }
 }
 
-let styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 60
@@ -156,8 +149,8 @@ let styles = StyleSheet.create({
     height:50,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop:10
+    margin:10
   }
 });
 
-export default One; //NavigatorExample;
+export default One; 

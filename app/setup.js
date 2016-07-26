@@ -1,7 +1,7 @@
-import App from './containers/App';
 import React, { Component } from 'react';
+import App from './containers/App';
 
-function setup() {
+const setup = () => {
   class Root extends Component {
     render() {
       return (

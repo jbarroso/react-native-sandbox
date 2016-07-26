@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
-import {
-  StyleSheet,
-  View,
-  Text,
-  TouchableOpacity
-} from 'react-native'
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
 import Home from '../views/Home';
 import SwiperExample1 from '../views/SwiperExample1';
 import SwiperExample2 from '../views/SwiperExample2';
+import SwiperExample3 from '../views/SwiperExample3';
+import LinkExample from '../views/LinkExample';
 import NavigatorExample from '../views/NavigatorExample';
+import IntroExample from '../views/IntroExample';
 
 class Menu extends Component {
   constructor() {
@@ -18,7 +16,10 @@ class Menu extends Component {
         {title: 'Home', component: Home},
         {title: 'Navigator Example', component: NavigatorExample},
         {title: 'Swiper Example1', component: SwiperExample1},
-        {title: 'Swiper Example2', component: SwiperExample2}
+        {title: 'Swiper Example2', component: SwiperExample2},
+        {title: 'Swiper Example3', component: SwiperExample3},
+        {title: 'Link Example', component: LinkExample},
+        {title: 'Intro Example', component: IntroExample}
       ],
     };
   }
@@ -52,7 +53,7 @@ class Menu extends Component {
   }
 }
 
-let styles = StyleSheet.create({
+const styles = StyleSheet.create({
   menuContainer: {
     flex: 1,
     left: 0,

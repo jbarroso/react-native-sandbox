@@ -3,14 +3,13 @@ import {StyleSheet, Navigator} from 'react-native';
 import Button from './Button';
 import Title from './Title';
 
-let getNavigationBar = (toggleSideMenu) => {
-  let routeMapper = {
+const getNavigationBar = (toggleSideMenu) => {
+  const routeMapper = {
     LeftButton(route, navigator, index, navState) {
+      console.log("index", index);
       let leftButton = {
-        onPress: (route.index > 0) ? 
-          navigator.pop : toggleSideMenu,
-          icon: (route.index > 0) ? 
-          'ios-arrow-back-outline' : 'ios-menu-outline'
+        onPress: (index > 0) ?  navigator.pop : toggleSideMenu,
+        icon: (index > 0) ? 'ios-arrow-back-outline' : 'ios-menu-outline'
       };
       // Show a cross icon when transition pops from bottom
       if(route.transition == 'FloatFromBottom')  {
@@ -34,7 +33,7 @@ let getNavigationBar = (toggleSideMenu) => {
   );
 };
 
-let styles = StyleSheet.create({
+const styles = StyleSheet.create({
   navigationBar: {
     flex: 1,
   }

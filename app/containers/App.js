@@ -1,5 +1,5 @@
-import { StyleSheet, View, Platform, Navigator, TouchableHighlight, Text} from 'react-native';
 import React, { Component } from 'react';
+import { StyleSheet, View, Navigator } from 'react-native';
 import Home from '../views/Home';
 import Menu from '../components/Menu';
 import SideMenu from 'react-native-side-menu';
@@ -85,7 +85,7 @@ class App extends Component {
   }
 }
 
-let styles = StyleSheet.create({
+const styles = StyleSheet.create({
   appContainer: {
     backgroundColor: "#FFFFFF",
   },
