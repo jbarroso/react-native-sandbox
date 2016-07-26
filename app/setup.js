@@ -5,11 +5,11 @@ const setup = () => {
   class Root extends Component {
     render() {
       return (
-        <App />
+        <App/>
       );
     }
   }
   return Root;
 }
 
-module.exports = setup;
+export default setup;

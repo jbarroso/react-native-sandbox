@@ -1,4 +1,4 @@
-const { AppRegistry } = require('react-native');
-const setup = require('./app/setup');
+import { AppRegistry } from 'react-native';
+import setup from './app/setup';
 
 AppRegistry.registerComponent('ReactNativeSandbox', setup);

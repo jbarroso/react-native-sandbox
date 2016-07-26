@@ -1,26 +1,30 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, TouchableHighlight, Linking, WebView } from 'react-native';
+import { StyleSheet, View, Text, TouchableHighlight, Linking} from 'react-native';
+import WebpageView from '../components/WebpageView';
 
 class LinkExample extends Component {
 
-	_goToUrl(url) {
+	goToUrl(url) {
 		Linking.openURL(url).catch(err => console.error('An error occurred', err));
 	}
 
-	_navigateToUrl(url) {
+	navigateToUrl(url) {
 		this.props.navigator.push({
-			component: MyWebView,
-			url
+			component: WebpageView,
+			passProps: {
+				url
+			}
 		})
 	}
 
 	render() {
+		const url = 'http://delolindogames.com';
 		return (
 			<View style={styles.container}>
-				<TouchableHighlight onPress={() => this._goToUrl('http://www.delolindo.com') } style={ styles.button }>
+				<TouchableHighlight onPress={() => this.goToUrl(url) } style={ styles.button }>
 					<Text>Linking in browser</Text>
 				</TouchableHighlight>
-				<TouchableHighlight onPress={() => this._navigateToUrl('http://www.delolindo.com') } style={ styles.button }>
+				<TouchableHighlight onPress={() => this.navigateToUrl(url) } style={ styles.button }>
 					<Text>Navigate to Webview</Text>
 				</TouchableHighlight>
 			</View>
@@ -28,24 +32,10 @@ class LinkExample extends Component {
 	}
 }
 
-class MyWebView extends Component {
-
-	render() {
-		return (
-			<WebView
-				source={{uri: this.props.url}}
-				style={{marginTop: 20}}
-			/>
-		)
-	}
-}
-
-
-
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		marginTop: 60
+		marginTop: 60,
 	},
 	text: {
 		fontSize:20
@@ -57,7 +47,6 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		margin:10
 	}
-
 });
 
 export default LinkExample;

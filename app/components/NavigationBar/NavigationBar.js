@@ -6,7 +6,6 @@ import Title from './Title';
 const getNavigationBar = (toggleSideMenu) => {
   const routeMapper = {
     LeftButton(route, navigator, index, navState) {
-      console.log("index", index);
       let leftButton = {
         onPress: (index > 0) ?  navigator.pop : toggleSideMenu,
         icon: (index > 0) ? 'ios-arrow-back-outline' : 'ios-menu-outline'
