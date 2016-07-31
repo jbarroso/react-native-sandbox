@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StyleSheet, View, TouchableOpacity, } from 'react-native'
+import { StyleSheet, View, TouchableOpacity } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons';
 
 class Button extends Component {
@@ -14,7 +14,7 @@ class Button extends Component {
       <View style={styles.container}>
         <TouchableOpacity onPress={this.props.onPress} activeOpacity={0.7} 
           hitSlop={{top: 7, right: 7, bottom: 7, left: 7}}>
-          <Icon name={this.props.icon} size={36} color={"#000000"} />
+          <Icon name={this.props.icon} style={styles.icon} size={36} color={"#000000"} />
         </TouchableOpacity>
       </View>
     );
@@ -27,7 +27,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  icon: {
+    paddingLeft: 20,
   }
+
 });
 
 export default Button;

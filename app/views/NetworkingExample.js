@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, ListView, Text, View, TouchableHighlight} from 'react-native';
+import { StyleSheet, ListView, Text, View, TouchableHighlight, ActivityIndicator} from 'react-native';
 import * as Progress from 'react-native-progress';
 
 class NetworkingExample extends Component {
@@ -55,7 +55,7 @@ class Movies extends Component {
 		if (this.props.loading) {
 			return (
 				<View style={styles.progressContainer}>
-					<Progress.CircleSnail color={'#efefef'}/>
+          <ActivityIndicator color="#efefef" size="large"/>
 				</View>
 			);
 		}
