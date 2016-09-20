@@ -17,10 +17,10 @@ class SwiperImage extends Component {
     return (
       <View style={styles.slide}>
         <Image style={styles.backdrop} source={images[this.props.image]} >
-					<View style={styles.backdropView}>
-						<Text style={styles.text}>Slide {this.props.image}</Text>
-					</View>
-				</Image>
+          <View style={styles.backdropView}>
+            <Text style={styles.text}>Slide {this.props.image}</Text>
+          </View>
+        </Image>
       </View>
     );
   }
@@ -53,24 +53,24 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   backdrop: {
-		flex:1,
-		justifyContent: 'flex-end',
+    flex:1,
+    justifyContent: 'flex-end',
     alignItems: 'center',
     paddingTop: 60,
     width: width,
     height: height 
   },
   backdropView: {
-		margin: 50,
+    margin: 50,
     height: 50,
     width: 320,
     backgroundColor: 'rgba(0,0,0,0)',
-		borderWidth:1,
-		borderColor: 'white',
+    borderWidth:1,
+    borderColor: 'white',
     justifyContent: 'center',
     alignItems: 'center'
   },
-	text: {
+  text: {
     fontSize: 20,
     backgroundColor: 'rgba(0,0,0,0)',
     color: 'white'
