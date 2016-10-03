@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, Text, View, ProgressBarAndroid } from 'react-native';
+import { AppRegistry, StyleSheet, Text, View, ProgressBarAndroid, ActivityIndicator } from 'react-native';
 
 
 class ProgressExample2 extends Component {
@@ -39,7 +39,7 @@ class ProgressExample2 extends Component {
 		return (
 			<View style={styles.container}>
 				<Text style={styles.welcome}>ProgressBar</Text>
-        <ProgressBarAndroid />
+        <ActivityIndicator/>
 
 				<Text style={styles.welcome}>Horizontal ProgressBar</Text>
         <ProgressBarAndroid progress={this.state.progress} styleAttr="Horizontal" indeterminate={false} />

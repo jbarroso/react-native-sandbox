@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
 import Home from '../views/Home';
 import SwiperExample1 from '../views/SwiperExample1';
-import SwiperExample2 from '../views/SwiperExample2';
-import SwiperExample3 from '../views/SwiperExample3';
 import LinkExample from '../views/LinkExample';
 import NavigatorExample from '../views/NavigatorExample';
 import IntroExample from '../views/IntroExample';
@@ -18,9 +16,7 @@ class Menu extends Component {
       menu: [
         {title: 'Home', component: Home},
         {title: 'Navigator Example', component: NavigatorExample},
-        {title: 'Swiper Example1', component: SwiperExample1},
-        {title: 'Swiper Example2', component: SwiperExample2},
-        {title: 'Swiper Example3', component: SwiperExample3},
+        {title: 'Swiper Example', component: SwiperExample1},
         {title: 'Link Example', component: LinkExample},
         {title: 'Intro Example', component: IntroExample},
         {title: 'Networking Example', component: NetworkingExample},
@@ -37,8 +33,8 @@ class Menu extends Component {
   render = () => {
     let { navigate } = this.props;
     let { menu } = this.state;
-
     let menuItems = [];
+
     menu.map((item)=>{
       let { title, component, props } = item;
       menuItems.push(

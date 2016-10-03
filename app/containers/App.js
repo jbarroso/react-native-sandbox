@@ -21,27 +21,15 @@ class App extends Component {
     this.setState({ isSideMenuOpen });
   }
 
-  _onSideMenuPress = (title, component, extraProps) => {
-    // Close menu
-    //this.props.closeSideMenu();
+  onSideMenuPress = (title, component, extraProps) => {
     this.updateSideMenuState(false);
-
     extraProps = extraProps || {};
-
-    //if(AppUtil.objIsEmpty(extraProps)) extraProps = {};
-
     this.refs.rootNavigator.replace({
       title: title,
       component: component,
       index: 0,
       ...extraProps
     });
-  }
-
-  _onSideMenuChange = (isSideMenuOpen) => {
-    if (isSideMenuOpen != this.state.isSideMenuOpen) {
-      this.toggleSideMenu();
-    }
   }
 
   _renderScene = (route, navigator) => {
@@ -57,9 +45,9 @@ class App extends Component {
     return (
       <SideMenu
         ref="rootSidebarMenu"
-        menu={<Menu navigate={this._onSideMenuPress} ref="rootSidebarMenu" />}
+        menu={<Menu navigate={this.onSideMenuPress} ref="rootSidebarMenu" />}
         isOpen={this.state.isSideMenuOpen}
-        onChange={this._onSideMenuChange}>
+        onChange={(isSideMenuOpen) => this.updateSideMenuState}>
         <Navigator 
           style={[styles.container, styles.appContainer]}
           ref="rootNavigator"
