@@ -8,6 +8,7 @@ import IntroExample from '../views/IntroExample';
 import NetworkingExample from '../views/NetworkingExample';
 import ProgressExample1 from '../views/ProgressExample1';
 import ProgressExample2 from '../views/ProgressExample2';
+import SwipeCards from '../views/SwipeCards';
 
 class Menu extends Component {
   constructor() {
@@ -22,6 +23,7 @@ class Menu extends Component {
         {title: 'Networking Example', component: NetworkingExample},
         {title: 'Progress Example1', component: ProgressExample1},
         {title: 'Progress Example2', component: ProgressExample2},
+        {title: 'Swipe Cards', component: SwipeCards},
       ],
     };
   }
