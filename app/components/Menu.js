@@ -9,6 +9,7 @@ import NetworkingExample from '../views/NetworkingExample';
 import ProgressExample1 from '../views/ProgressExample1';
 import ProgressExample2 from '../views/ProgressExample2';
 import SwipeCards from '../views/SwipeCards';
+import AsyncStorageExample from '../views/AsyncStorageExample';
 
 class Menu extends Component {
   constructor() {
@@ -24,6 +25,7 @@ class Menu extends Component {
         {title: 'Progress Example1', component: ProgressExample1},
         {title: 'Progress Example2', component: ProgressExample2},
         {title: 'Swipe Cards', component: SwipeCards},
+        {title: 'AsyncStorage Example', component: AsyncStorageExample},
       ],
     };
   }
